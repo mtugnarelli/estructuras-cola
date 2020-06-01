@@ -6,6 +6,19 @@ package estructuras;
  */
 public class ColaSobreArreglos<T> implements Cola<T> {
 
+    private T[] elementos;
+    private int cantidad;
+    private int posicionFrente;
+    private int posicionFondo;
+
+    public ColaSobreArreglos(int capacidadInicial) {
+    	
+    	elementos = (T[]) new Object[capacidadInicial];
+    	cantidad = 0;
+    	posicionFrente = 0;
+    	posicionFondo = -1;
+    }
+    
 	@Override
 	public boolean estaVacia() {
 
