@@ -33,9 +33,39 @@ public class ColaSobreArreglos<T> implements Cola<T> {
 
 	@Override
 	public void acolar(T nuevoElemento) {
-		
-	}
 
+		if (cantidad == elementos.length) {
+
+			ampliarCapacidad();
+		}
+		
+		posicionFondo = incrementar(posicionFondo);
+		elementos[posicionFondo] = nuevoElemento;
+		cantidad++;
+	}
+	
+	private void ampliarCapacidad() {
+
+		T[] elementosNuevos = crearArreglo(2 * elementos.length);
+
+        for( int i = 0; i < cantidad; i++) {
+
+        	elementosNuevos[i] = elementos[posicionFrente];
+        	posicionFrente = incrementar(posicionFrente);
+        }
+        
+        elementos = elementosNuevos;
+        posicionFrente = 0;
+        posicionFondo = cantidad - 1;
+	}
+	
+	private int incrementar(int posicion) {
+		
+		posicion++;
+		
+		return (posicion < elementos.length) ? posicion : 0;
+	}
+	
 	@Override
 	public T desacolar() {
 
