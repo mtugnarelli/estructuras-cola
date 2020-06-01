@@ -75,6 +75,10 @@ public class ColaSobreArreglos<T> implements Cola<T> {
 	@Override
 	public T obtenerFrente() {
 
-		return null;
+		if (estaVacia()) {
+			throw new NoExisteElElemento();
+		}
+
+		return elementos[posicionFrente];
 	}
 }
