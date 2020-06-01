@@ -31,7 +31,14 @@ public class ColaSobreListaEnlazada<T> implements Cola<T> {
 	@Override
 	public T desacolar() {
 
-		return null;
+		try {
+
+			return elementos.removeFirst();
+
+		} catch (NoSuchElementException e) {
+
+			throw new NoExisteElElemento();
+		}
 	}
 
 	@Override
