@@ -24,6 +24,7 @@ public class ColaSobreListaEnlazada<T> implements Cola<T> {
 	@Override
 	public void acolar(T nuevoElemento) {
 		
+		elementos.addLast(nuevoElemento);
 	}
 
 	@Override
