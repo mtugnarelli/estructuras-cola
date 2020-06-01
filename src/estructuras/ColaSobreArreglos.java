@@ -28,7 +28,7 @@ public class ColaSobreArreglos<T> implements Cola<T> {
 	@Override
 	public boolean estaVacia() {
 
-		return false;
+		return (cantidad == 0);
 	}
 
 	@Override
