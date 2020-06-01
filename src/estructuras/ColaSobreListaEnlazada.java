@@ -1,6 +1,7 @@
 package estructuras;
 
 import java.util.LinkedList;
+import java.util.NoSuchElementException;
 
 /**
  * Implementación de Cola (Queue) basada en una ListaEnlazada.
@@ -36,6 +37,13 @@ public class ColaSobreListaEnlazada<T> implements Cola<T> {
 	@Override
 	public T obtenerFrente() {
 
-		return null;
+		try {
+			
+			return elementos.getFirst();
+		
+		} catch (NoSuchElementException e) {
+			
+			throw new NoExisteElElemento();
+		}
 	}
 }
