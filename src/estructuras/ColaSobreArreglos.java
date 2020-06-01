@@ -11,7 +11,8 @@ public class ColaSobreArreglos<T> implements Cola<T> {
     private int posicionFrente;
     private int posicionFondo;
 
-    public ColaSobreArreglos(int capacidadInicial) {
+    @SuppressWarnings("unchecked")
+	public ColaSobreArreglos(int capacidadInicial) {
     	
     	elementos = (T[]) new Object[capacidadInicial];
     	cantidad = 0;
