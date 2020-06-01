@@ -69,7 +69,12 @@ public class ColaSobreArreglos<T> implements Cola<T> {
 	@Override
 	public T desacolar() {
 
-		return null;
+		T frente = obtenerFrente();
+		
+		posicionFrente = incrementar(posicionFrente);
+		cantidad--;
+		
+		return frente;
 	}
 
 	@Override
