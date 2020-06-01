@@ -1,11 +1,20 @@
 package estructuras;
 
+import java.util.LinkedList;
+
 /**
  * Implementación de Cola (Queue) basada en una ListaEnlazada.
  * 
  */
 public class ColaSobreListaEnlazada<T> implements Cola<T> {
 
+	private LinkedList<T> elementos;
+	
+	public ColaSobreListaEnlazada() {
+		
+		elementos = new LinkedList<T>();
+	}
+	
 	@Override
 	public boolean estaVacia() {
 
