@@ -18,7 +18,7 @@ public class ColaSobreListaEnlazada<T> implements Cola<T> {
 	@Override
 	public boolean estaVacia() {
 
-		return false;
+		return elementos.isEmpty();
 	}
 
 	@Override
