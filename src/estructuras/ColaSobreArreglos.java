@@ -11,14 +11,19 @@ public class ColaSobreArreglos<T> implements Cola<T> {
     private int posicionFrente;
     private int posicionFondo;
 
-    @SuppressWarnings("unchecked")
 	public ColaSobreArreglos(int capacidadInicial) {
     	
-    	elementos = (T[]) new Object[capacidadInicial];
+    	elementos = crearArreglo(capacidadInicial);
     	cantidad = 0;
     	posicionFrente = 0;
     	posicionFondo = -1;
     }
+    
+	@SuppressWarnings("unchecked")
+	private T[] crearArreglo(int capacidad) {
+
+		return (T[]) new Object[capacidad];
+	}
     
 	@Override
 	public boolean estaVacia() {
