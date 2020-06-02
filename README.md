@@ -1,13 +1,13 @@
 
 Algoritmos y Programación 2 - UNTREF
 
-# Uso de Colas
+# Implementaciones de Cola
 
 ## Clase 
 
-Material para la [Clase 10.2 Implementación de Colas](https://youtu.be/)
+Material para la [Clase 10.2 Implementaciones de Cola](https://youtu.be/XkMDI_nTnuU)
 
-[![VER](https://img.youtube.com/vi//0.jpg)](https://www.youtube.com/watch?v=)
+[![VER](https://img.youtube.com/vi/XkMDI_nTnuU/0.jpg)](https://www.youtube.com/watch?v=XkMDI_nTnuU)
 
 ## Estructura de datos
 
